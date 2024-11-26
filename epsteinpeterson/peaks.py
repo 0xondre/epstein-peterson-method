@@ -10,8 +10,6 @@ def calculate_peak(steps: dict):
         if k == next(reversed(steps)) or k == next(iter(steps)): # skip first and last pls work
             continue
         h = (v-fv)-(k-fk)*1000*(lv-fv)/((k-fk)*1000+(lk-k)*1000)
-        if k == 6.1:
-            print(h)
         if h > 0.34:
             peaks_over_los = peaks_over_los | {k: h}
  
@@ -32,7 +30,6 @@ def get_ep_peak(steps: dict,peaks: dict):
         return peaks
 
     peak_key = calculate_peak(steps)
-    print(peak_key)
 
     if peak_key is None:
         return peaks
