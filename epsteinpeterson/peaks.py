@@ -11,7 +11,7 @@ def calculate_peak(steps: dict):
             continue
         h = (v-fv)-(k-fk)*1000*(lv-fv)/((k-fk)*1000+(lk-k)*1000)
         if h > 0:
-            peaks_over_los = peaks_over_los | {k: h}
+            peaks_over_los[k] = v
  
     if not peaks_over_los:
         return None
