@@ -7,7 +7,7 @@ def calculate_peak(steps: dict):
     peaks_over_los = {}
 
     for k, v in steps.items():
-        if k == next(reversed(steps)) or k == next(iter(steps)): # skip first and last pls work
+        if k == next(reversed(steps)) or k == next(iter(steps)): # skip first and last 
             continue
         h = (v-fv)-(k-fk)*1000*(lv-fv)/((k-fk)*1000+(lk-k)*1000)
         if h > 0:
