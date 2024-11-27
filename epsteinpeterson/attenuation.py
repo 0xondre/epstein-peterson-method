@@ -22,7 +22,7 @@ def calculate_attenuation(steps:dict, peaks:dict, f:float):
         v = h * math.sqrt(2*((distances[i]-distances[i-1])+(distances[i+1]-distances[i]))*1000/(lam*(distances[i]-distances[i-1])*1000*(distances[i+1]-distances[i])*1000))
         a = 6.9 + 20*math.log10(math.sqrt((v-0.1*0.1)*(v-0.1*0.1)+1)+v-0.1)
 
-        params.append({'Distance from transmitter':distances[i],'A':a,'v':v,'h':h})
+        params.append({'Distance from transmitter':distances[i],'A':round(a,2),'v':round(v,2),'h':round(h,2)})
 
         a_sum += a
     return a_sum, params
