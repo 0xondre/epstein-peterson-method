@@ -54,14 +54,3 @@ def get_elevation(steps:dict):
     else:
         print(f"Request failed with status code {response.status_code}")
         return None
-
-# start_lat, start_lon = 49.809596,19.052732
-# end_lat, end_lon = 49.699071,19.269432
-
-# steps = generate_steps(start_lat,start_lon,end_lat, end_lon)
-
-# print(steps)
-
-# elevations = get_elevation(steps)
-
-# print(elevations)
