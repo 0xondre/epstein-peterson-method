@@ -1,7 +1,7 @@
 from epsteinpeterson.peaks import get_ep_peak
 from epsteinpeterson.attenuation import calculate_attenuation
 from utils.get_data import generate_steps,get_elevation
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
